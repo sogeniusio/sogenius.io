@@ -1,0 +1,142 @@
+.marg-bot {
+    margin-bottom: 20px;
+}
+
+.post-header {
+    height: 100vh;
+    position: relative;
+}
+
+.post-description {
+    position: absolute;
+    /*bottom: 70px;*/
+    /*left: 7%;*/
+      margin: auto;
+  left: 0; bottom: 10%; right: 0;
+}
+
+.scroll-to-btn {
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    left: 10%;
+}
+
+.scroll-to-btn i {
+    font-size: 40px;
+}
+
+header.masthead {
+    padding: 0;
+    position: absolute;
+    margin-top: 60px;
+}
+
+@media (max-width: 992px) {
+    .post-description {
+        line-height: 1.5em;
+        width: 80%;
+        bottom: 160px;
+    }
+    .post-excerpt {
+        color: #000;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .post-description {
+        line-height: 1.5em;
+        bottom: 140px;
+        width: 80%;
+    }
+    .profile__pic {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .news-author {
+        text-align: center;
+    }
+    .post-header {
+        height: 90vh;
+    }
+}
+
+/*
+Post author
+*/
+
+.news-author {
+    background: #c0392b;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.news-author a {
+    color: #b19e9e;
+}
+
+.news-author a:visited {
+    color: purple;
+}
+
+.article-meta__links,
+.article-meta__user {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.content blockquote,
+.lined {
+    position: relative;
+}
+
+.col5 {
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 39.91667%;
+    margin-left: 0;
+    margin-right: 3%;
+}
+
+.profile__pic {
+    float: left;
+    margin-right: 1.4em;
+}
+
+.profile__title {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: .65em;
+    margin-bottom: 0;
+}
+
+.profile__subtitle {
+    font-size: .9em;
+    margin-bottom: .8em;
+}
+
+.col7:last-child {
+    margin-right: 0;
+}
+
+.col7 {
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 57.08333%;
+    margin-left: 0;
+    margin-right: 3%;
+}
+
+.profile__content p {
+    color: #fff;
+}

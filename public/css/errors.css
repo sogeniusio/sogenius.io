@@ -1,0 +1,38 @@
+
+/*--------------------
+General Style
+---------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+body,
+html {
+  font-family: 'Gotham Rounded Medium', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #b40404;
+}
+a:hover {
+  color: #b4040F;
+}
+
+/*--------------------
+404 Page
+---------------------*/

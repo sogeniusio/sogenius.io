@@ -1,0 +1,90 @@
+.color {
+  color: #c0392b;
+}
+.white {
+  color: #ffffff;
+}
+.silver {
+  color: #fdfdfd;
+}
+.grey {
+  color: #565656;
+}
+.dark {
+  color: #292929;
+}
+.black {
+  color: #121212;
+}
+.color-bg {
+  background-color: #c0392b;
+}
+.white-bg {
+  background-color: #ffffff;
+}
+.silver-bg {
+  background-color: #fdfdfd;
+}
+.grey-bg {
+  background-color: #565656;
+}
+.dark-bg {
+  background-color: #292929;
+}
+.black-bg {
+  background-color: #121212;
+}
+body {
+  background-color: #c0392b;
+}
+body:before {
+  background-color: #ffffff;
+}
+footer.mastfoot {
+  background-color: #fdfdfd;
+}
+a {
+  color: #c0392b;
+}
+a:hover {
+  color: #121212;
+}
+::selection {
+  background: #292929;
+  color: #e4e4e4;
+}
+::-moz-selection {
+  background: #292929;
+  color: #e4e4e4;
+}
+.link-show-poster {
+  background-color: #ffffff;
+}
+.btn-oscar-color {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+.btn-oscar-color:hover {
+  border-color: #c0392b;
+  background-color: #c0392b;
+  color: #ffffff;
+}
+nav.mastnav ul li a {
+  color: #121212;
+}
+nav.mastnav ul li a:hover,
+nav.mastnav ul li a.activelink {
+  color: #565656;
+}
+.works-filter li a.active span {
+  color: #e4e4e4 !important;
+}
+.bxslider .bx-wrapper .bx-pager {
+  background-color: #292929;
+}
+.footnav ul li a {
+  border-color: #121212;
+}
+article .light-text {
+  color: #fdfdfd;
+}

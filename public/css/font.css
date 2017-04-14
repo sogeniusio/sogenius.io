@@ -1,0 +1,37 @@
+.font1 {
+  font-family: 'Gotham Rounded Book', sans-serif;
+}
+.font2 {
+  font-family: 'Gotham Rounded Medium', sans-serif;
+}
+.font2hairline {
+  font-family: 'Gotham Rounded', sans-serif;
+}
+.font2light {
+  font-family: 'Gotham Rounded Light', sans-serif;
+}
+.font2semibold {
+  font-family: 'Gotham Rounded Medium', sans-serif;
+}
+.font2bold {
+  font-family: 'Gotham Rounded Bold', sans-serif;
+}
+.font2extrabold {
+  font-family: 'Gotham Rounded Bold', sans-serif;
+}
+.font2ultralight {
+  font-family: 'Gotham Rounded Light', sans-serif;
+}
+.font2black {
+  font-family: 'Gotham Rounded Bold', sans-serif;
+}
+.font3 {
+  font-family: 'Gotham Rounded Book', sans-serif;
+}
+body,
+p {
+  font-family: 'Gotham Rounded Book', sans-serif;
+}
+.btn-oscar {
+  font-family: 'Gotham Rounded Book', sans-serif;
+}
