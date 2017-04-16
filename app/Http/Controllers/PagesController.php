@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Mail\ContactForm;
 use App\Http\Requests;
 use App\Identity;
 use App\Project;
@@ -71,7 +72,7 @@ class PagesController extends Controller
         'email' => 'required|email',
         'subject' => 'required|min:3|max:60',
         'message' => 'required|min:5',
-        'g-recaptcha-response' => 'required|captcha'
+        // 'g-recaptcha-response' => 'required|captcha'
       ]);
 
       $data = array(
@@ -83,12 +84,8 @@ class PagesController extends Controller
       );
 
       if ($validator -> passes()) {
-              // data is valid
-              Mail::send('emails.contact', $data, function($message) use ($data){
-                $message->from($data['email']);
-                $message->to('hi@sogenius.io');
-                $message->subject($data['subject']);
-              });
+    
+              Mail::to($data['email'])->queue(new ContactForm($data));
 
               //Redirect to contact page
               return redirect()->back()->with('success', true)->with('message','Your message was successfully sent. Ill be in touch soon');

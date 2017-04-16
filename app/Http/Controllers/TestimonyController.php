@@ -76,7 +76,7 @@ class TestimonyController extends Controller
         //   $message->to($data['email']);
         //   $message->subject("We'd love to hear from you!");
         // });
-        Mail::to($data['email'])->send(new ReviewRequest($data));
+        Mail::to($data['email'])->queue(new ReviewRequest($data));
 
         Session::flash('success', 'The review request was successfully sent.');
 
