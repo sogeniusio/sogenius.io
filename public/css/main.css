@@ -356,7 +356,8 @@ footer.mastfoot h6 {
 6. Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-section.mastwrap {
+section > h3.section-header {
+    margin-bottom: 50px;
 }
 
 .inner-pad {

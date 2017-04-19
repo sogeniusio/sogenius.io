@@ -37,7 +37,7 @@
   color: #F5F5F5;
 }
 .color5 {
-  color: #399BFF;
+  color: #607D8B;
 }
 .color6 {
   color: #33577B;
@@ -71,7 +71,7 @@
 }
 /* Color Class Background */
 .color0-bg {
-  background: #3D464D;
+  background: #37474F;
 }
 .color1-bg {
   background: #37363E;
@@ -86,7 +86,7 @@
   background: #F5F5F5;
 }
 .color5-bg {
-  background: #399BFF;
+  background: #607D8B;
 }
 .color6-bg {
   background: #33577B;
@@ -126,15 +126,15 @@
   color: #EF4836;
 }
 .color-fix {
-  color: #399BFF;
+  color: #607D8B;
 }
 body {
-  background: #3D464D;
+  background: #37474F;
   color: #58666E;
   margin: 0;
   line-height: 1.7em;
   font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   outline: 0;
 }
 ::-moz-selection {
@@ -144,7 +144,7 @@ body {
   background: #D5EAFF;
 }
 a {
-  color: #399BFF;
+  color: #607D8B;
   text-decoration: none;
 }
 a:hover,
@@ -298,7 +298,7 @@ Top
 ================================================================================= */
 #top {
   height: 60px;
-  background: #399BFF;
+  background: #607D8B;
   color: #fff;
   width: 100%;
   position: fixed;
@@ -513,7 +513,7 @@ Sidebar
   top: 60px;
   left: 0;
   font-family: 'Montserrat', sans-serif;
-  background: #3D464D;
+  background: #37474F;
   z-index: 0;
   font-size: 13px;
   font-weight: normal;
@@ -615,7 +615,7 @@ Sidebar
   margin: 7px 0;
 }
 .sidebar-plan .progress-bar {
-  background: #399BFF;
+  background: #607D8B;
 }
 .sidebar-plan .link {
   position: absolute;
@@ -636,7 +636,7 @@ Sidebar
   color: #fff;
 }
 .sidebar-colorful .color1 {
-  background: #399BFF;
+  background: #607D8B;
 }
 .sidebar-colorful .color2 {
   background: #33577B;
@@ -710,7 +710,7 @@ Sidepanel
   display: block;
   width: 300px;
   position: fixed;
-  background: #3D464D;
+  background: #37474F;
   z-index: 2;
   top: 60px;
   padding: 0;
@@ -974,7 +974,7 @@ Page Header
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: #3D464D;
+  background: #37474F;
   opacity: 0.99;
 }
 .loading img {
@@ -1194,7 +1194,7 @@ Presentation
   margin: -20px;
 }
 .alert1 {
-  background: #399BFF;
+  background: #607D8B;
 }
 .alert2 {
   background: #33577B;
@@ -1234,8 +1234,8 @@ Presentation
   background: #E99844;
 }
 .alert1-light {
-  background: #d2e8ff;
-  color: #00356c;
+  background: #b7c6cd;
+  color: #0d1012;
 }
 .alert2-light {
   background: #7ea3c9;
@@ -1619,7 +1619,7 @@ Mailbox
   line-height: normal;
 }
 .status .who .name b {
-  color: #399BFF;
+  color: #607D8B;
 }
 .status .who .from {
   font-size: 12px;
@@ -1693,7 +1693,7 @@ Invoice
   text-align: center;
   color: #76747A;
   font-weight: 300;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
 }
 .invoice .logo img {
@@ -1729,7 +1729,7 @@ Invoice
   color: #76747A;
 }
 .invoice .table p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   color: #76747A;
 }
@@ -1753,7 +1753,7 @@ Invoice
 }
 .invoice .bottomtext {
   font-size: 11px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 .invoice .invoicename {
   color: #E4E4E4;
@@ -2008,8 +2008,8 @@ Top Stats
 Awesome Bootstrap Checkbox Rewrite
 ================================================================================= */
 .checkbox-primary input[type="checkbox"]:checked + label::before {
-  background-color: #399BFF;
-  border-color: #399BFF;
+  background-color: #607D8B;
+  border-color: #607D8B;
 }
 .checkbox-primary input[type="checkbox"]:checked + label::after {
   color: #fff;
@@ -2043,13 +2043,13 @@ Awesome Bootstrap Checkbox Rewrite
   color: #fff;
 }
 .radio-primary input[type="radio"] + label::after {
-  background-color: #399BFF;
+  background-color: #607D8B;
 }
 .radio-primary input[type="radio"]:checked + label::before {
-  border-color: #399BFF;
+  border-color: #607D8B;
 }
 .radio-primary input[type="radio"]:checked + label::after {
-  background-color: #399BFF;
+  background-color: #607D8B;
 }
 .radio-danger input[type="radio"] + label::after {
   background-color: #EF4836;
@@ -2295,7 +2295,7 @@ fieldset[disabled] .btn {
 }
 /* Button Default */
 .btn-default {
-  background-color: #399BFF;
+  background-color: #607D8B;
   color: #fff;
 }
 .btn-default:hover,
@@ -2304,18 +2304,18 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  background-color: #4da5ff;
+  background-color: #688897;
   color: #fff;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  background: #208eff;
+  background: #566f7c;
   box-shadow: none;
   color: #fff;
 }
 .btn-default .badge {
-  color: #399BFF;
+  color: #607D8B;
   background-color: #fff;
 }
 /* Button Primary */
@@ -2649,7 +2649,7 @@ fieldset[disabled] .btn {
   border-radius: 4px;
 }
 .label-default {
-  background: #399BFF;
+  background: #607D8B;
 }
 .label-primary {
   background: #33577B;
@@ -2889,7 +2889,7 @@ select {
 }
 .dropdown-menu > li > a {
   padding: 9px 20px;
-  color: #3D464D;
+  color: #37474F;
 }
 .dropdown-menu .divider {
   margin: 4px 0;
@@ -2999,7 +2999,7 @@ div[data-role="editor-toolbar"] {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #399BFF;
+  background-color: #607D8B;
 }
 .nav-stacked li {
   width: 100%;
@@ -3050,7 +3050,7 @@ div[data-role="editor-toolbar"] {
   color: inherit;
   cursor: default;
   background-color: transparent;
-  border-bottom: 3px solid #399BFF;
+  border-bottom: 3px solid #607D8B;
 }
 .nav-icon .fa {
   font-size: 16px;
@@ -3089,7 +3089,7 @@ div[data-role="editor-toolbar"] {
   color: #fff;
 }
 .tabcolor5-bg {
-  background: #399BFF;
+  background: #607D8B;
 }
 .tabcolor6-bg {
   background: #33577B;
@@ -3131,7 +3131,7 @@ div[data-role="editor-toolbar"] {
 .panel-default > .panel-heading {
   background-color: inherit;
   border-bottom: 0;
-  color: #3D464D;
+  color: #37474F;
 }
 .panel-title {
   font-family: 'Montserrat', sans-serif;
@@ -3160,7 +3160,7 @@ div[data-role="editor-toolbar"] {
 }
 .panel .badge {
   font-size: 11px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-transform: none;
   padding: 4px 10px;
   margin-left: 5px;
@@ -3245,8 +3245,8 @@ div[data-role="editor-toolbar"] {
 }
 /* Panel Primary */
 .panel-primary {
-  border-color: #399BFF;
-  background: #399BFF;
+  border-color: #607D8B;
+  background: #607D8B;
   color: #fff;
 }
 .panel-primary > .panel-heading {
@@ -3255,11 +3255,11 @@ div[data-role="editor-toolbar"] {
   border-bottom: transparent;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #399BFF;
+  border-top-color: #607D8B;
 }
 .panel-primary .panel-title {
   color: #fff;
-  background: #399BFF;
+  background: #607D8B;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .panel-primary .panel-footer {
@@ -3267,7 +3267,7 @@ div[data-role="editor-toolbar"] {
   background: rgba(255, 255, 255, 0.04);
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #399BFF;
+  border-bottom-color: #607D8B;
 }
 /* Panel Success */
 .panel-success {
@@ -3375,8 +3375,8 @@ div[data-role="editor-toolbar"] {
 }
 /* Panel Dark */
 .panel-dark {
-  border-color: #3D464D;
-  background: #3D464D;
+  border-color: #37474F;
+  background: #37474F;
   color: #fff;
 }
 .panel-dark > .panel-heading {
@@ -3385,11 +3385,11 @@ div[data-role="editor-toolbar"] {
   border-bottom: transparent;
 }
 .panel-dark > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #3D464D;
+  border-top-color: #37474F;
 }
 .panel-dark .panel-title {
   color: #fff;
-  background: #3D464D;
+  background: #37474F;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .panel-dark .panel-footer {
@@ -3397,11 +3397,11 @@ div[data-role="editor-toolbar"] {
   background: rgba(255, 255, 255, 0.04);
 }
 .panel-dark > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #3D464D;
+  border-bottom-color: #37474F;
 }
 /* Panel Tools */
 .panel-tools {
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   position: absolute;
   right: 16px;
   top: 13px;
@@ -3491,7 +3491,7 @@ div[data-role="editor-toolbar"] {
 }
 /* Widget Tools */
 .widget-tools {
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   position: absolute;
   right: 15px;
   top: 13px;
@@ -3600,7 +3600,7 @@ div[data-role="editor-toolbar"] {
   box-shadow: none;
 }
 .progress-bar {
-  background: #399BFF;
+  background: #607D8B;
   font-size: 12px;
   font-weight: 600;
   line-height: normal;
@@ -3809,7 +3809,7 @@ Widgets
 }
 .chart-with-stats .title small {
   display: block;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Open Sans', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 12px;
   margin-top: 4px;
 }
@@ -4033,7 +4033,7 @@ Widgets
   padding: 18px 0;
 }
 .quick-menu a .fa {
-  color: #399BFF;
+  color: #607D8B;
 }
 .quick-menu a:hover {
   background: rgba(0, 0, 0, 0.03);
@@ -4082,7 +4082,7 @@ Widgets
 /* widget table-dic */
 .table-dic .fa {
   text-shadow: none;
-  color: #399BFF;
+  color: #607D8B;
   font-size: 20px;
   margin-right: 8px;
 }
