@@ -28,9 +28,4 @@ class AdminController extends Controller
     {
         return Redirect::to(url('/basic-status'));
     }
-    // Netdata system overview
-    public function getNetdata()
-    {
-        return Redirect::to(url('/admin/netdata'));
-    }
 }

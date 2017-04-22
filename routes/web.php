@@ -50,8 +50,6 @@ Auth::routes();
 
 Route::get('admin', 'AdminController@getAdmin');
 
-Route::get('admin/netdata', 'AdminController@getNetdata');
-
 Route::resource('admin/settings', 'AdminSettingsController');
 Route::resource('admin/testimonies', 'TestimonyController', ['except' => ['create']]);
 
