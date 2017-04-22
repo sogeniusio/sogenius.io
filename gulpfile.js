@@ -16,5 +16,5 @@ require('laravel-elixir-vue-2');
 
 
 elixir((mix) => {
-    mix.version('style.less', './public/backend/css/style.css'); /* Admin Styles */
+    mix.less('style.less', './public/backend/css/style.css'); /* Admin Styles */
 });

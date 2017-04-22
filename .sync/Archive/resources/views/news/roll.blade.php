@@ -33,17 +33,13 @@
             </article>
       </div>
 
-      @foreach ($posts as $post )
-        <div class="row">
-              <article class="col-md-8 col-md-offset-2 text-left ">
-                <h6 class="promo-text font2semibold black">22 Sep 2016</h6>
-                <h3 class="main-heading font2light black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </h3> <br/>
-                <a href="post.html" class="btn btn-oscar btn-oscar-dark" >View Post</a>
-              </article>
-        </div>
-      @endforeach
-
-
+      <div class="row">
+            <article class="col-md-8 col-md-offset-2 text-left ">
+              <h6 class="promo-text font2semibold black">22 Sep 2016</h6>
+              <h3 class="main-heading  font2light black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </h3> <br/>
+              <a href="post.html" class="btn btn-oscar btn-oscar-dark" >View Post</a>
+            </article>
+      </div>
       <div class="row add-top">
             <article class="col-md-8 col-md-offset-2 text-left ">
               <h6 class="promo-text font2semibold black">22 Sep 2016</h6>

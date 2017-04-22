@@ -1,4 +1,4 @@
-@extends('admin2')
+@extends('main')
 
 @section('title', '| All Tags')
 
@@ -19,7 +19,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bar-chart-o fa-fw"></i> Complete list of created tags
+                    <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
                     <div class="pull-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -56,16 +56,8 @@
                                     @foreach ($tags as $tag)
                                         <tr>
                                             {{--                                     <td>{{ $tag->id }}</td>
-                                             --}}<td><a href="{{ route('tags.show', $tag->id) }}">{{ $tag->name }} <i style="font-weight:100;" class="fa fa-chevron-right"></i></a></td>
-                                            <td>{{ $tag->posts()->count() }}
-
-                                              @if ($tag->posts()->count())
-                                                Post
-                                              @else
-                                                Posts
-                                              @endif
-
-                                            </td>
+                                             --}}                                    <td><a href="{{ route('tags.show', $tag->id) }}">{{ $tag->name }} <i style="font-weight:100;" class="fa fa-chevron-right"></i></a></td>
+                                            <td>{{ $tag->posts()->count() }} Posts</td>
                                         </tr>
                                     @endforeach
 
@@ -83,7 +75,7 @@
                                     {{ Form::text('name', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                                 </div>
                                 <div class="form-group">
-                                    {{ Form::submit('Create Tag', array('class' => 'btn btn-success btn-sm btn-block')) }}
+                                    {{ Form::submit('Create Tag', array('class' => 'btn2 btn-success btn-sm btn-block')) }}
                                 </div>
 
 

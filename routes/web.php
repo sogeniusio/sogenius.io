@@ -50,11 +50,14 @@ Auth::routes();
 
 Route::get('admin', 'AdminController@getAdmin');
 
+Route::get('admin/netdata', 'AdminController@getNetdata');
+
 Route::resource('admin/settings', 'AdminSettingsController');
 Route::resource('admin/testimonies', 'TestimonyController', ['except' => ['create']]);
 
 Route::resource('admin/posts', 'PostController');
-Route::resource('admin/categories', 'CategoryController', ['except' => ['create']]);
+Route::resource('admin/categories', 'CategoryController', ['except' => ['create', 'destroy']]);
+Route::delete('categories', ['as'=>'categories.destroy', 'uses'=>'CategoryController@destroy']);
 Route::resource('admin/tags', 'TagController', ['except' => ['create']]);
 
 Route::resource('admin/projects', 'ProjectController');

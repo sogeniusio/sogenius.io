@@ -13,10 +13,7 @@ class AddExcerptToPosts extends Migration
      */
     public function up()
     {
-      Schema::table('posts', function (Blueprint $table) {
-          // Add excert column to posts table
-          $table->string('excerpt')->nullable()->after('title');
-      });
+        //
     }
 
     /**
@@ -26,8 +23,6 @@ class AddExcerptToPosts extends Migration
      */
     public function down()
     {
-      Schema::table('posts', function (Blueprint $table) {
-          $table->dropColumn('excerpt');
-      });
+        //
     }
 }

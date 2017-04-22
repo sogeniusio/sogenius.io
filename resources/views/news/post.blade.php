@@ -1,7 +1,13 @@
-@extends('main') @section('title', ' | Genius Blog') @section('stylesheets') {{-- STYLESHEETS --}} {{ Html::style('/bower_components/ckeditor/plugins/prism/themes/prism-cb.css') }}
+@extends('main') 
+@section('title', ' | Genius Blog') 
+@section('stylesheets') 
+{{-- STYLESHEETS --}} 
+{{ Html::style('/bower_components/ckeditor/plugins/prism/themes/prism-cb.css') }}
 {{ Html::style('css/owl.carousel.css') }}
 {{ Html::style('css/post.css') }}
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> @endsection @section('content')
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+@endsection 
+@section('content')
 <section class="mastwrap">
     <div class="container-fluid">
         <div class="row">

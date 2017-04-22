@@ -262,7 +262,6 @@ nav.mastnav ul:hover {
 }
 
 nav.mastnav ul li {
-    margin: 0px 10px 5px 10px;
     display: inline-block;
 }
 
@@ -660,7 +659,7 @@ section > h3.section-header {
 
 .works-filter li {
     display: inline-block;
-    margin-left: 10px;
+    // margin-left: 10px;
     margin-right: 10px;
 }
 

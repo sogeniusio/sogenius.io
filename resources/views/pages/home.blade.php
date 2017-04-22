@@ -55,7 +55,7 @@
 
 @else
   @section('works-filter')
-      <article class="col-md-5 no-pad">
+      <article class="col-md-6 no-pad">
           <!--works filter panel :starts -->
           <div class="works-filter-wrap">
               <ul class="works-filter  text-right clearfix font2">
@@ -144,6 +144,7 @@
 
     </section>
 
+@include('partials._usermeta')
 
 @endsection
 

@@ -99,3 +99,7 @@ ul.main-menu > li.activelink {
 /*.logo-block {*/
     /*transform: rotate(90deg);*/
 /*}*/
+
+.entry-meta li {
+  display: inline;
+}

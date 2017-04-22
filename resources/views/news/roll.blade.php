@@ -26,6 +26,7 @@ pre {
     </section>
     <section class="container-outer silver-bg">
         <section class="container about pad-top pad-bottom">
+            <h3 class="section-header text-center">Trending articles</h3> 
             @foreach ($posts as $post )
             <!-- Normal Demo-->
             <!-- Post-->

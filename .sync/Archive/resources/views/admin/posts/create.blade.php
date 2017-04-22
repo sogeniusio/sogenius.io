@@ -1,4 +1,4 @@
-@extends('admin2')
+@extends('admin')
 
 @section('title', '| Create New Post')
 
@@ -12,32 +12,32 @@
 
     <script type="text/javascript">
         tinymce.init({
-            selector : "textarea",
-            plugins : ["advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table contextmenu paste"],
-            toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-      });
+            selector: "textarea",
+            plugins: ["advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table contextmenu paste"],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
     </script>
 
-    <style >
-      .mastfoot {
-        margin-bottom: 40px !important;
-      }
+    <style>
+        .mastfoot {
+            margin-bottom: 40px !important;
+        }
     </style>
 
 @endsection
 
 @section('content')
 
-  <div class="row">
-      <div class="col-lg-12">
-          <h1 class="page-header">Create New Post</h1>
-      </div>
-  </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Create New Post</h1>
+        </div>
+    </div>
 
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
                     <div class="pull-right">
                         <div class="btn-group">
@@ -58,8 +58,8 @@
                             </ul>
                         </div>
                     </div>
-                  </div>
-                  <div class="panel-body">
+                </div>
+                <div class="panel-body">
 
                     <div class="form-content">
 
@@ -87,21 +87,21 @@
                                     <div class="form-group">
                                         {{ Form::label('category_id', "Category:") }}
 
-                                            <select class="form-control" name="category_id">
-                                                {{-- @foreach ($categories as $category)
-                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                                @endforeach --}}
-                                            </select>
+                                        <select class="form-control" name="category_id">
+                                            {{-- @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach --}}
+                                        </select>
                                     </div>
                                     <div class="form-group" style="margin-top: 25px;">
                                         {{ Form::label('tags', "Tags:") }}
 
-                                            <select class="form-control select2-multi" name="tags[]" multiple="multiple">
-                                                {{-- @foreach ($tags as $tag)
-                                                    <option value="{{ $tag->id }}">{{ $tag->name }}</option>
-                                                @endforeach --}}
+                                        <select class="form-control select2-multi" name="tags[]" multiple="multiple">
+                                            {{-- @foreach ($tags as $tag)
+                                                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                            @endforeach --}}
 
-                                            </select>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@
                             </div>
 
                             <div class="form-group">
-                                {{ Form::submit('Create Post', array('class' => 'btn btn-primary btn-lg btn-block')) }}
+                                {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block')) }}
                             </div>
 
                             {!! Form::close() !!}
@@ -125,14 +125,14 @@
                         </div>
                     </div>
 
-                  </div>
-
                 </div>
 
-              </div>
-
-
             </div>
+
+        </div>
+
+
+    </div>
 
 
 @endsection

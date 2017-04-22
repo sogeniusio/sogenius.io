@@ -80,19 +80,47 @@ class CategoryController extends Controller
       //
     }
 
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  int $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function destroy($id)
+    // {
+    //   $category = Category::find($id);
+    //   Post::whereCategoryId($id)->update(['category_id' => null]);
+    //   $category->delete();
+    //   Session::flash('success', 'The tag was successfully deleted.');
+
+    //   return redirect()->route('categories.index');
+    // }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-      $category = Category::find($id);
-      Post::whereCategoryId($id)->update(['category_id' => null]);
-      $category->delete();
-      Session::flash('success', 'The tag was successfully deleted.');
+        // Category::destroy($request->categories); 
+        // $category = Category::find($id);
+    // Category::find(explode(',', $id))->delete();
+    $category_set = Category::destroy($request->categories); 
+    
+    Post::whereCategoryId($category_set)->update(['category_id' => null]);
+    
+    return back();
 
-      return redirect()->route('categories.index');
+
+        // $category->delete();
+
+        // return back();
+        // $category = Category::find($id);
+        // Post::whereCategoryId($id)->update(['category_id' => null]);
+        // $category->delete();
+        // Session::flash('success', 'The tag was successfully deleted.');
+
+        // return redirect()->route('categories.index');
     }
 }

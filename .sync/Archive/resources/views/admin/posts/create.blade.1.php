@@ -1,4 +1,4 @@
-@extends('admin2')
+@extends('admin')
 
 @section('title', '| Create New Post')
 
@@ -8,20 +8,14 @@
     {!! Html::style('/css/select2.min.css') !!}
 
     <!-- TINYMCE WYSIWYG EDITOR -->
-    <script type="text/javascript" src="{{ asset('/packages/tinymce/tinymce.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/packages/tinymce/tinymce.min.js') }}"></script>
 
     <script type="text/javascript">
-    tinymce.init({
-selector: 'textarea',
-height: 500,
-plugins: [
-'advlist autolink lists link image charmap print preview anchor',
-'searchreplace visualblocks code fullscreen',
-'insertdatetime media table contextmenu paste code'
-],
-toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-content_css: '//www.tinymce.com/css/codepen.min.css'
-});
+        tinymce.init({
+            selector: "textarea",
+            plugins: ["advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table contextmenu paste"],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
     </script>
 
     <style>

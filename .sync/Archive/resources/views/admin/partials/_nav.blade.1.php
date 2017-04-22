@@ -1,13 +1,13 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/admin">So Genius I/O</a>
+        <a class="navbar-brand" href="index.html">So Genius I/O</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -211,43 +211,13 @@
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-              @if (Auth::guest())
-
-                                <li><a style="font-size: 13px; font-weight: 700; border:none;" class="btn btn-primary"
-                                       href="{{ url('/login') }}">Login</a></li>
-
-                                <li><a style="font-size: 13px; font-weight: 700; border:none;" class="btn btn-primary btn-sm"
-                                       href="{{ url('/register') }}">Register</a></li>
-                            @else
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false">
-                                        Hello, {{ Auth::user()->firstname }}
-                                    </a>
-
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="{{ url('admin/settings') }}" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false">
-                                        Settings
-                                    </a>
-
-
-                                </li>
-                                <li>
-                                    <a href="{{ url('/logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            @endif
-
+                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                </li>
+                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
             </ul>
             <!-- /.dropdown-user -->
         </li>
@@ -270,33 +240,23 @@
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 {{--POSTS--}}
                 <li>
                     <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Posts<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                          <a href="{{ route('posts.index') }}">View Posts</a>
+                            <a href="flot.html">View Posts</a>
                         </li>
                         <li>
-                            <a href="{{ route('posts.create') }}">Create New Post</a>
+                            <a href="flot.html">Create New Post</a>
                         </li>
 
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
                 {{-- END POSTS--}}
-                {{--CATEGORIES--}}
-                <li>
-                    <a href="{{ route('categories.index') }}"><i class="fa fa-table fa-fw"></i> View Categories</a>
-                </li>
-                {{-- END CATEGORIES--}}
-                {{--TAGS--}}
-                <li>
-                    <a href="{{ route('tags.index') }}"><i class="fa fa-table fa-fw"></i> View Tags</a>
-                </li>
-                {{-- END TAGS--}}
                 <li>
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">

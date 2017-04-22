@@ -8,7 +8,8 @@
     <meta charset="utf-8">
     <title>So Genius I/O @yield('title')</title>
 
-    <meta name="description" content="So Genius I/O - Digital Brand Designer specializing in web/print design, branding and social media">
+    <meta name="description"
+          content="So Genius I/O - Digital Brand Designer specializing in web/print design, branding and social media">
     <meta name="author" content="So Genius I/O">
 
     <!-- Mobile Specific Metas
@@ -17,12 +18,13 @@
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png"/>
 
     <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     {{ Html::style('fonts/webfonts.css') }}
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600%7CLato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+    {{-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600%7CLato:400,300,100,700,900' rel='stylesheet'
+          type='text/css'> --}}
 
     <!-- ICON FONTS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -32,20 +34,20 @@
 
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    {{ Html::style('/css/bootstrap.css') }}
-    {{ Html::style('/elements/css/elements.css') }}
-    {{ Html::style('/css/sinister.css') }}
-    {{ Html::style('/css/venobox.css') }}
-    {{ Html::style('/css/slimmenu.css') }}
-    {{ Html::style('/css/main.css') }}
-    {{ Html::style('/css/main-bg.css') }}
-    {{ Html::style('/css/main-responsive.css') }}
-    {{ Html::style('/css/custom.css') }}
+{{ Html::style('/css/bootstrap.css') }}
+{{ Html::style('/elements/css/elements.css') }}
+{{ Html::style('/css/sinister.css') }}
+{{ Html::style('/css/venobox.css') }}
+{{ Html::style('/css/slimmenu.css') }}
+{{ Html::style('/css/main.css') }}
+{{ Html::style('/css/main-bg.css') }}
+{{ Html::style('/css/main-responsive.css') }}
+{{ Html::style('/css/custom.css') }}
 
-    @yield('stylesheets')
+@yield('stylesheets')
 
 
-    <!-- LESS
+<!-- LESS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet/less" type="text/css" href="/less/color.less">
     <link rel="stylesheet/less" type="text/css" href="/less/fonts.less">

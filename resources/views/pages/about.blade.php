@@ -87,8 +87,8 @@ h6 small {
             </section>
         </section>
 
-
         @include('partials._testimonials')
+        @include('partials._usermeta')
 
     </section>
 

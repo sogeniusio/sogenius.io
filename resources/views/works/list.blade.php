@@ -27,10 +27,10 @@
     <section class="container about pad-top-half pad-bottom-half">
 
       <div class="row">
-            <article class="col-md-5 text-left  inner-pad">
+            <article class="col-md-6 text-left  inner-pad">
               <h6 class="super-text  font2bold black">Selected <br /> Work.</h6>
             </article>
-            <article class="col-md-5 col-md-offset-2 text-left ">
+            <article class="col-md-6 text-left ">
               <!--works filter panel :starts -->
               <div class="works-filter-wrap">
                   <ul class="works-filter  text-right clearfix font2">

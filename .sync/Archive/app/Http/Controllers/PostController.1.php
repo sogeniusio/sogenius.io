@@ -4,14 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers;
 use App\Post;
-use App\Category;
-use App\Tag;
-use Session;
-use Purifier;
-use Image;
 
 class PostController extends Controller
 {
@@ -19,7 +12,6 @@ class PostController extends Controller
   {
       $this->middleware('auth');
   }
-
     /**
      * Display a listing of the resource.
      *
@@ -27,16 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-      // create variable to store all categories
-      $categories = Category::all();
-
-      // create variable to store all blog posts
-
-      $posts = Post::orderBy('id', 'desc')->paginate(10);
-
-      return view('admin.posts.index')->withPosts($posts)->withCategories($categories);
-
-      // return a view and pass in the above variable
+        return view('admin.posts.index');
     }
 
     /**
@@ -46,9 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
-      $categories = Category::all();
-      $tags       = Tag::all();
-      return view('admin.posts.create')->withCategories($categories)->withTags($tags);
+        return view('admin.posts.create');
     }
 
     /**
@@ -63,7 +44,6 @@ class PostController extends Controller
       $this->validate($request, array(
               'title'         => 'required|max:255',
               'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
-              'excerpt'       => 'required|max:180',
               'category_id'   => 'required|integer',
               'body'          => 'required',
           ));
@@ -75,12 +55,10 @@ class PostController extends Controller
       // Grab items from form
       $post->title        = $request->title;
       $post->slug         = $request->slug;
-      $post->excerpt      = $request->excerpt;
       $post->category_id  = $request->category_id;
       $post->body         = Purifier::clean($request->body);
 
       // Store Featured Images in DB
-
 
       if($request->hasFile('feat_image')) {
         // Set feat_img to file in request
@@ -88,12 +66,12 @@ class PostController extends Controller
         // Edit file name including extension
         $filename   = 'ftimg' . $post->id . time() . '.' . $feat_img->getClientOriginalExtension();
         // Setup location
-        $location   = public_path( 'images/posts/ftimgs/' . $filename );
+        $location   = public_path( '/images/blog/posts/' . $filename );
         // Make image with resize
-        Image::make($feat_img)->resize( 720, 400 )->save($location);
+        Image::make($feat_img)->resize( 800, 500 )->save($location);
 
         // Store image in DB
-        $post->feat_image = $filename;
+        $post->image      = $filename;
 
       }
 
@@ -109,7 +87,7 @@ class PostController extends Controller
 
       // redirect to post
 
-      return redirect()->route( 'posts.show', $post->id );
+      return redirect()->route( 'admin.posts.show', $post->id );
     }
 
     /**
@@ -170,7 +148,6 @@ class PostController extends Controller
       if ($request->input('slug') == $post->slug) {
           $this->validate($request, array(
               'title'         => 'required|max:255',
-              'excerpt'       => 'required|max:180',
               'category_id'   => 'required|integer',
               'body'          => 'required'
           ));
@@ -178,7 +155,6 @@ class PostController extends Controller
           // else skip conditional object
           $this->validate($request, array(
               'title'     => 'required|max:255',
-              'excerpt'       => 'required',
               'slug'      => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
               'category_id'   => 'required|integer',
               'body'      => 'required'
@@ -190,7 +166,6 @@ class PostController extends Controller
 
       $post               = Post::find($id);
       $post->title        = $request->input('title');
-      $post->excerpt      = $request->input('excerpt');
       $post->slug         = $request->input('slug');
       $post->category_id  = $request->input('category_id');
       $post->body         = Purifier::clean($request->input('body'));
@@ -210,7 +185,7 @@ class PostController extends Controller
 
       // redirect with flash data to posts.show
 
-      return redirect()->route('posts.show', $post->id);
+      return redirect()->route('admin.posts.show', $post->id);
     }
 
     /**
@@ -239,6 +214,6 @@ class PostController extends Controller
 
   // return to blog index view
 
-  return redirect()->route('posts.index');
+  return redirect()->route('admin.posts.index');
     }
 }

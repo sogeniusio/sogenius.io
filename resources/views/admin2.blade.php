@@ -16,24 +16,22 @@
     <!-- START CONTENT -->
     <div class="content">
         <!-- Start Page Header -->
-        <div class="page-header">
-            <h1 class="title">@yield('page-title')</h1>
-            <ol class="breadcrumb">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="#">Extra Pages</a></li>
-                <li class="active">Blank Page</li>
-            </ol>
-            <!-- Start Page Header Right Div -->
-            <div class="right">
-                <div class="btn-group" role="group" aria-label="...">
-                    <a href="index.html" class="btn btn-light">Dashboard</a>
-                    <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
-                    <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
-                    <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
-                </div>
-            </div>
-            <!-- End Page Header Right Div -->
-        </div>
+<div class="row presentation">
+
+    <div class="col-lg-8 col-md-6 titles">
+      <span class="icon color9-bg"><i class="fa @yield('icon') "></i></span>
+      <h1>@yield('title')</h1>
+      <h4>@yield('page-description')</h4>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <ul class="list-unstyled list">
+        @yield('link-area')
+      </li>
+      </ul>
+    </div>
+
+  </div>
         <!-- End Page Header -->
 
             @yield('content')

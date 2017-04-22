@@ -45,13 +45,13 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array('name' => 'required|max:255'));
-        $tag = new Tag;
+        $tag = new Tag; 
         $tag->name = $request->name;
         $tag->save();
 
         Session::flash('success', 'A new tag was successfully created!');
 
-        return redirect()->route('tags.index');
+        return redirect()->route('admin.tags.index');
 
     }
 
@@ -97,7 +97,7 @@ class TagController extends Controller
 
         Session::flash('success', 'Your new tag has successfully been updated!');
 
-        return redirect()->route('tags.show', $tag->id);
+        return redirect()->route('admin.tags.show', $tag->id);
     }
 
     /**
@@ -126,6 +126,6 @@ class TagController extends Controller
 
         // return to blog index view
 
-        return redirect()->route('tags.index');
+        return redirect()->route('admin.tags.index');
     }
 }

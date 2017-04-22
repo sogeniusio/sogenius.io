@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
-
+    namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Mail\ContactForm;
@@ -9,50 +8,53 @@ use App\Http\Requests;
 use App\Identity;
 use App\Project;
 use App\Type;
+use App\Post;
 use Session;
 use Mail;
 use Config;
 use View;
 use PDF;
+use GeoIP;
 use Validator;
 use Response;
 use Redirect;
-
-
-
+use Redis;
+use Cache;
 
 use InstagramScraper\Instagram;
 
-
 class PagesController extends Controller
 {
-
     public function getHome()
     {
-        $data['projects'] = Project::orderBy('created_at', 'desc')->limit(10)->get();
+        $data['visit'] = Redis::incr('visitors.home');
+
+        $data['projects'] = Cache::remember('projects.recent', 60 * 60 * 24 * 5, function () {
+          return Project::orderBy('created_at', 'desc')->limit(6)->get();
+        });
+
         $data['types']= Type::all();
         $identities = Identity::all();
         $data['identities2'] = array();
           foreach ($identities as $identity) {
               $identities2[$identity->id] = $identity->name;
           }
+
         return View::make('pages.home', $data);
 
     }
 
     public function getAbout()
     {
-      $data['first_name'] = 'Hosnel';
-      $data['last_name'] = 'Guerrier';
-      $data['full_name'] = $data['first_name'] . ' ' . $data['last_name'];
+      $data['visit'] = Redis::incr('visitors.about');
+      $data['full_name'] = config('about.name');
       $data['social_media'] = array(
-        'fb_page' => 'facebook.com/hosnelg/',
-        'fb_fan_page' => 'facebook.com/sogen1us/',
-        'ig_page' => 'instagram.com/sogen1us/',
-        'tw_page' => 'twitter.com/hosnelg/',
-        'gh_[age]' => 'github.com/hosnelg/',
+        'fb_page' => config('about.personal_social_media.facebook'),
+        'ig_page' => config('about.personal_social_media.instagram'),
+        'tw_page' => config('about.personal_social_media.twitter'),
+        'gh_page' => config('about.personal_social_media.github'),
       );
-      $data['email'] = 'hi@sogenius.io';
+      $data['email'] = config('about.business_email');
 
       return View::make('pages.about', $data);
 
@@ -60,9 +62,8 @@ class PagesController extends Controller
 
     public function getContact()
     {
-
-        return view('pages.contact');
-
+        $data['visit'] = Redis::incr('visitors.contact');
+        return View::make('pages.contact', $data);
     }
 
     public function postContact(Request $request)
@@ -84,8 +85,9 @@ class PagesController extends Controller
       );
 
       if ($validator -> passes()) {
-    
+              
               Mail::to($data['email'])->queue(new ContactForm($data));
+              Redis::incr('send.contact');
 
               //Redirect to contact page
               return redirect()->back()->with('success', true)->with('message','Your message was successfully sent. Ill be in touch soon');
@@ -99,7 +101,7 @@ class PagesController extends Controller
 
       public function getQuote()
       {
-
+        Redis::incr('visitors.quote');
         $questions['services'] = array(
           'Accept donations',
           'Update website on your own',
@@ -141,12 +143,10 @@ class PagesController extends Controller
 
         return View::make('pages.quote', $questions);
 
-
       }
 
       public function postQuote(Request $request)
       {
-
         $validator = Validator::make($request->all(), [
           'salutation' => '',
           'firstname' => 'required|min:3|max:100',
@@ -193,10 +193,11 @@ class PagesController extends Controller
           'created_at' => newYorkTime(),
         );
 
-        $filename = $data['quoteid'] . '-' . time() . '.pdf';
+        $filename = $data['quoteid'] . '_' . time() . '.pdf';
 
         $data['quote_location'] = storage_path('quotes/' . $filename);
         $data['pdf'] = PDF::loadView('quotes.pdf', $data)->setPaper('letter')->setOrientation('portrait')->setOption('margin-bottom', 0)->save($data['quote_location']);
+        Redis::incr('send.quote');
 
       }
 

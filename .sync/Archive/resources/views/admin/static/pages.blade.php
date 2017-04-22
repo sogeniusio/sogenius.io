@@ -1,5 +1,5 @@
-@extends('admin2')
-@section('title', '| Dashboard')
+@extends('admin')
+@section('title', '| A page')
 
 @section('stylesheets')
 
@@ -9,7 +9,7 @@
 
       <div class="row">
           <div class="col-lg-12">
-              <h3 class="">Welcome back, {{Auth::user()->firstname}}!</h3>
+              <h1 class="page-header">Dashboard</h1>
           </div>
           <!-- /.col-lg-12 -->
       </div>

@@ -1,4 +1,4 @@
-@extends('admin2')
+@extends('admin')
 
 @section('title', '| Edit Comment')
 
@@ -43,7 +43,7 @@
                         {{ Form::textarea('comment', null, array('class' => 'form-control', 'required' => '')) }}
                     </div>
                     <div class="form-group">
-                        {{ Form::submit('Update Comment', array('class' => 'btn btn-success btn-sm btn-block')) }}
+                        {{ Form::submit('Update Comment', array('class' => 'btn2 btn-success btn-sm btn-block')) }}
                     </div>
                 </div>
 

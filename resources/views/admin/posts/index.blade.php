@@ -1,6 +1,14 @@
 @extends('admin2')
-@section('title', '| Blog Posts')
+@section('icon')
+fa-list
+@stop
+@section('title', 'All news posts')
 @section('page-title', 'All news posts')
+@section('page-description', 'Posts are entries that display in reverse order on your home page. Posts usually have comments fields beneath them and are included in your site\'s RSS feed.')
+@section('link-area')
+<a href="{{ route('posts.create') }}"><button type="button" class="btn btn-primary btn-icon btn-lg"><span class="badge">{{ $posts->count() }} </span> Create new post</button></a>
+
+@stop
 @section('stylesheets')
     {!! Html::style('/css/parsley.css') !!}
     {!! Html::style('/css/select2.min.css') !!}
@@ -14,7 +22,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-          Striped rows
+          @yield('page-title')
         </div>
 
         <div class="panel-body table-responsive">
@@ -26,8 +34,8 @@
                 <th>Title</th>
                 <th class="hidden-sm hidden-xs">Category</th>
                 <th class="hidden-sm hidden-xs">Tags</th>
-                <th>Created</th>
-                <th>Options</th>
+                <th>Published</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -53,12 +61,11 @@
                   </td>
                   <td>{{ date('m/d/y', strtotime($post->created_at)) }}</td>
                   <td>
-                      <div class="btn-group">
-                          {!! Html::linkRoute('posts.show', 'View', array( $post->id ), array('class' => 'btn btn-link  btn-xs col-xs-12 col-sm-4')) !!}
+{{--                           {!! Html::linkRoute('posts.show', 'View', array( $post->id ), array('class' => 'btn btn-link  btn-xs col-xs-12 col-sm-4')) !!}
                           {!! Html::linkRoute('posts.edit', 'Edit', array( $post->id ), array('class' => 'btn btn-link  btn-xs col-xs-12 col-sm-4')) !!}
-                          {!! Html::linkRoute('posts.destroy', 'Delete', array( $post->id ), array('class' => 'btn btn-link btn-xs col-xs-12 col-sm-4', 'type' => 'button')) !!}
+                          {!! Html::linkRoute('posts.destroy', 'Delete', array( $post->id ), array('class' => 'btn btn-link btn-xs col-xs-12 col-sm-4', 'type' => 'button')) !!} --}}
                           <div class="btn-group">
-                            <button type="button" class="btn btn-light">Option</button>
+                            <button type="button" class="btn btn-light">Options</button>
                             <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                               <span class="caret"></span>
                               <span class="sr-only">Toggle Dropdown</span>
@@ -71,7 +78,6 @@
                               <li><a href="#">Separated link</a></li>
                             </ul>
                           </div>
-                      </div>
                   </td>
               </tr>
             @endforeach

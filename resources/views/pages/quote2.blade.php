@@ -211,7 +211,6 @@
 @endsection
 @section('scripts')
 
-
-
+@include('partials._usermeta')
 
 @endsection

@@ -14,6 +14,8 @@ return [
     &amp marketing, and print design. ',
     'work' => '1800Flowers.com',
     'avatar' => 'http://sogenius.dev/images/profile-avatar.jpg',
+    'business_email' => 'hi@sogenius.io',
+    'personal_email' => 'hosnelg@gmail.com',
     'personal_social_media' => [
         'twitter' => [
             'url' => 'http://twitter.com/hosnelg',

@@ -12,6 +12,7 @@ use App\Tag;
 use Session;
 use Purifier;
 use Image;
+use View;
 use Storage;
 
 
@@ -29,16 +30,12 @@ class PostController extends Controller
      */
     public function index()
     {
-        // create variable to store all categories
-        $categories = Category::all();
+      $data['categories'] = Category::all();
+      $data['allposts'] = Post::all();
+      $data['posts'] = Post::orderBy('id', 'desc')->paginate(10);
 
-        // create variable to store all blog posts
+      return View::make('admin.posts.index', $data);
 
-        $posts = Post::orderBy('id', 'desc')->paginate(10);
-
-        return view('admin.posts.index')->withPosts($posts)->withCategories($categories);
-
-        // return a view and pass in the above variable
     }
 
     /**
@@ -48,9 +45,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        $tags = Tag::all();
-        return view('admin.posts.create')->withCategories($categories)->withTags($tags);
+        $data['posts'] = Post::all();
+        $data['categories'] = Category::all();
+        $data['tags'] = Tag::all();
+      return View::make('admin.posts.create', $data);
     }
 
     /**

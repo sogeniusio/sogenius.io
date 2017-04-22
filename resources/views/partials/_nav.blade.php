@@ -11,7 +11,7 @@
                     <ul class="main-menu ">
 
                         <li class="{{ Request::path() ==  '/' ? 'activelink' : ''  }} main-link font2">
-                            <a href="{{ url('/') }}"></i>Home</a>
+                            <a href="{{ url('/') }}"></i><i class="fa fa-home" aria-hidden="true"></i></a>
                         </li>
                         <li class="{{ Request::path() ==  'about' ? 'activelink' : ''  }} main-link font2">
                             <a href="{{ url('about') }}"></i>About</a>

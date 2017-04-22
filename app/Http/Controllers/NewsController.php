@@ -9,15 +9,14 @@ use App\Post;
 use App\Category;
 use App\Tag;
 use Carbon\Carbon;
-
 use View;
 use SEO;
+use Cache;
+use Redis;
 
 
 class NewsController extends Controller
 {
-    // Return news posts to blog view
-
     public function getNews()
     {
 
@@ -30,13 +29,14 @@ class NewsController extends Controller
       SEO::opengraph()->addProperty('type', 'articles');
       SEO::twitter()->setSite('@sogeniusio');
 
-      $news['posts'] = Post::orderBy('created_at', 'desc')->limit(4)->get();
+      $news['posts'] = Cache::remember('posts.recent', 60 * 60 * 24 * 5, function () {
+          return Post::orderBy('created_at', 'desc')->limit(6)->get();
+      });
 
       if (count($news['posts']) == 0) {
       } else {
         $news['tags'] = Tag::all();
       }
-
       return View::make('news.roll', $news);
 
     }
@@ -45,20 +45,10 @@ class NewsController extends Controller
     {
 
         $news['posts'] = Post::orderBy('created_at', 'desc')->limit(4)->get();
-
         $news['categories'] = Category::all();
-
-        // if (count($news['posts']) == 0) {
-
-        // } else {
-        //   $news['tags'] = Tag::all();
-        // }
-
-        // $news['posts_by_date'] = Post::all()->groupBy(function($date) {
-        //     return Carbon::parse($date->created_at)->format('Y-m');
-        // });
-
         $news['post'] = Post::where('slug', '=', $slug)->first();
+
+        Redis::zincrby('trending_articles', 1, $news['post']);
 
         return View::make('news.post', $news);
 

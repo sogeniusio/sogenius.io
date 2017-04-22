@@ -166,6 +166,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -181,7 +184,9 @@ return [
         Yajra\Disqus\DisqusServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         anlutro\LaravelSettings\ServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -248,7 +253,9 @@ return [
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
-        'Setting' => 'anlutro\LaravelSettings\Facade'
+        'Setting' => 'anlutro\LaravelSettings\Facade',
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
 
     ],
 

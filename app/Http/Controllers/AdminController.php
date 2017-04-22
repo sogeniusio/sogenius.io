@@ -7,9 +7,7 @@ use Redirect;
 use App\Post;
 use App\Project;
 
-
 use Illuminate\Http\Request;
-
 
 class AdminController extends Controller
 {
@@ -25,11 +23,14 @@ class AdminController extends Controller
         $projects = Project::all();
         return view('admin.dashboard2')->withPosts($posts)->withProjects($projects);
     }
-
+    // Nginx status directory
     public function getStatus()
     {
         return Redirect::to(url('/basic-status'));
-
-        
+    }
+    // Netdata system overview
+    public function getNetdata()
+    {
+        return Redirect::to(url('/admin/netdata'));
     }
 }

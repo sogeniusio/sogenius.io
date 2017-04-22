@@ -53,5 +53,6 @@ h6 small {
         @include('partials._testimonials')
 
     </section>
+@include('partials._usermeta')
 
 @endsection
