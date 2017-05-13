@@ -1,4 +1,8 @@
-@extends('main') @section('title', ' | Genius Blog') @section('stylesheets') {{-- STYLESHEETS --}} {{ Html::style('/css/owl.carousel.css') }} {{ Html::style('/css/news.css') }}
+@extends('main') @section('title', ' | Genius Blog') 
+@section('stylesheets') 
+{{-- STYLESHEETS --}} 
+{{ Html::style('/css/owl.carousel.css') }} 
+{{ Html::style('/css/news.css') }}
 <style media="screen">
 .post-article {
     margin: 20px 0;

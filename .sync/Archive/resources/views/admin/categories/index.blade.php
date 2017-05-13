@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('admin2')
 
 @section('title', '| All Categories')
 
@@ -18,26 +18,11 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                    <div class="pull-right">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                Actions
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu pull-right" role="menu">
-                                <li><a href="#">Action</a>
-                                </li>
-                                <li><a href="#">Another action</a>
-                                </li>
-                                <li><a href="#">Something else here</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
+                  <div class="pull-right">
+                    <strong>Total:</strong> {{ $categories->count() }}
+                  </div>
+
                 </div>
 
                 <div class="panel-body">
@@ -59,8 +44,8 @@
                                             <td>{{ $category->name }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    {!! Html::linkRoute('categories.edit', 'Edit', array( $category->id ), array('class' => 'btn2 btn2-default outline btn2-sm ')) !!}
-                                                    {!! Html::linkRoute('categories.destroy', 'Delete', array( $category->id ), array('class' => 'btn2 btn2-danger outline btn2-sm', 'type' => 'button')) !!}
+                                                    {!! Html::linkRoute('categories.edit', 'Edit', array( $category->id ), array('class' => 'btn btn-default outline btn-xs ')) !!}
+                                                    {!! Html::linkRoute('categories.destroy', 'Delete', array( $category->id ), array('class' => 'btn btn-danger outline btn-xs', 'type' => 'button')) !!}
 
                                                 </div>
 
@@ -82,7 +67,7 @@
                                     {{ Form::text('name', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                                 </div>
                                 <div class="form-group">
-                                    {{ Form::submit('Create', array('class' => 'btn2 btn-success btn-sm btn-block')) }}
+                                    {{ Form::submit('Create', array('class' => 'btn btn-success btn-sm btn-block')) }}
                                 </div>
 
 

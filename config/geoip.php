@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'service' => 'ipapi',
+    'service' => 'maxmind_database',
 
     /*
     |--------------------------------------------------------------------------
@@ -128,12 +128,12 @@ return [
         'ip' => '127.0.0.0',
         'iso_code' => 'US',
         'country' => 'United States',
-        'city' => 'New Haven',
-        'state' => 'CT',
-        'state_name' => 'Connecticut',
-        'postal_code' => '06510',
-        'lat' => 41.31,
-        'lon' => -72.92,
+        'city' => 'New York',
+        'state' => 'NY',
+        'state_name' => 'New York',
+        'postal_code' => '10001',
+        'lat' => 40.7128,
+        'lon' => -74.0059,
         'timezone' => 'America/New_York',
         'continent' => 'NA',
         'default' => true,

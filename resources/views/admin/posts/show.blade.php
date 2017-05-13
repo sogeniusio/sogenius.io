@@ -1,7 +1,28 @@
 @extends('admin2')
-
-@section('title', '| View Post')
-
+@extends('admin2') 
+@section('icon', 'fa-eye') 
+@section('title', $post->title) 
+@section('page-description', $post->excerpt)
+@section('link-area')
+        <li><i class="fa fa-check"></i>Responsive</li><li>
+        </li><li><i class="fa fa-check"></i>Style Options</li><li>
+        </li><li><i class="fa fa-check"></i>Based on <a href="http://getbootstrap.com/css/#tables" target="_blank">Bootstrap Tables</a></li><li>
+      </li></ul>
+    <a href="{{ route('posts.create') }}" class="btn btn-primary btn-icon btn-sm">
+    Create new post
+    </a>
+</li>
+<li>
+    <a href="{{ route('posts.index') }}" class="btn btn-primary btn-sm">
+        Back to posts list
+    </a>
+</li>
+<li>
+    <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-warning btn-tag btn-sm">
+        Edit
+    </a>
+</li>
+@stop 
 @section('stylesheets')
 {{--
     {!! Html::style('/css/parsley.css') !!}
@@ -13,30 +34,12 @@
 @endsection
 
 @section('content')
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">{{ $post->title }}
-                <div class="pull-right">
-                    <div class="col-md-12">
-                        <a href="{{ route('posts.index') }}" class="btn btn-default"><span><i
-                                        class="fa fa-angle-left"></i></span> Back to posts list</a>
-                        {!! Html::linkRoute('posts.edit', 'Edit', array( $post->id ), array('class' => 'btn btn-primary')) !!}
-                    </div>
-                </div>
-            </h1>
-
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     This is a summary of a post. It includes all pertinent metadata attached with the post.
                 </div>
-
-
                 <div class="panel-body">
                   <div class="container-fluid">
                         <div class="row">

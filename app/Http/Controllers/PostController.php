@@ -32,7 +32,7 @@ class PostController extends Controller
     {
       $data['categories'] = Category::all();
       $data['allposts'] = Post::all();
-      $data['posts'] = Post::orderBy('id', 'desc')->paginate(10);
+      $data['posts'] = Post::orderBy('id', 'DESC')->paginate(10);
 
       return View::make('admin.posts.index', $data);
 
@@ -48,7 +48,8 @@ class PostController extends Controller
         $data['posts'] = Post::all();
         $data['categories'] = Category::all();
         $data['tags'] = Tag::all();
-      return View::make('admin.posts.create', $data);
+
+        return View::make('admin.posts.create', $data);
     }
 
     /**

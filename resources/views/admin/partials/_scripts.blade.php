@@ -1,30 +1,26 @@
-<!-- jQuery -->
-<script src="/packages/jquery/jquery.min.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
-<script src="/packages/bootstrap/js/bootstrap.min.js"></script>
-
+{!! Html::script('/packages/bootstrap/js/bootstrap.min.js') !!}
 <!-- Metis Menu Plugin JavaScript -->
-<script src="/packages/metisMenu/metisMenu.min.js"></script>
+{!! Html::script('/packages/metisMenu/metisMenu.min.js') !!}
 
 <!-- Morris Charts JavaScript -->
-<script src="/packages/raphael/raphael.min.js"></script>
-<script src="/packages/morrisjs/morris.min.js"></script>
-<script src="/data/morris-data.js"></script>
+{!! Html::script('/packages/raphael/raphael.min.js') !!}
+{!! Html::script('/packages/morrisjs/morris.min.js') !!}
+{!! Html::script('/data/morris-data.js') !!}
 
 <!-- Custom Theme JavaScript -->
-<script src="/js/sb-admin-2.js"></script>
+{!! Html::script('/data/morris-data.js') !!}
+
+{!! Html::script('/js/sb-admin-2.js') !!}
 
 <!-- Prism -->
-<script src="/js/libs/prism.js"></script>
+{!! Html::script('/js/libs/prism.js') !!}
 
 <!-- DataTables Javascript -->
-<script type="text/javascript" src="/packages/datatables/js/dataTables.bootstrap.min.js"></script>
-
+{!! Html::script('/packages/datatables/js/dataTables.bootstrap.min.js') !!}
 
 <!-- Custom Javascript -->
-<script type="text/javascript" src="/js/main.js"></script>
-
+{!! Html::script('/js/main.js') !!}
 
 
 @yield('scripts')

@@ -1,11 +1,17 @@
+/*--------------------------------------------------
+
+COLORS
+
+*/
+
 .color {
   color: #c0392b;
 }
 .white {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .silver {
-  color: #fdfdfd;
+  color: #FDFDFD;
 }
 .grey {
   color: #565656;
@@ -20,10 +26,10 @@
   background-color: #c0392b;
 }
 .white-bg {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .silver-bg {
-  background-color: #fdfdfd;
+  background-color: #FDFDFD;
 }
 .grey-bg {
   background-color: #565656;
@@ -38,16 +44,20 @@ body {
   background-color: #c0392b;
 }
 body:before {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 footer.mastfoot {
-  background-color: #fdfdfd;
+  background-color: #FDFDFD;
 }
 a {
   color: #c0392b;
 }
 a:hover {
   color: #121212;
+}
+::-moz-selection {
+  background: #292929;
+  color: #e4e4e4;
 }
 ::selection {
   background: #292929;
@@ -58,7 +68,7 @@ a:hover {
   color: #e4e4e4;
 }
 .link-show-poster {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .btn-oscar-color {
   border-color: #c0392b;
@@ -67,7 +77,7 @@ a:hover {
 .btn-oscar-color:hover {
   border-color: #c0392b;
   background-color: #c0392b;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 nav.mastnav ul li a {
   color: #121212;
@@ -86,5 +96,5 @@ nav.mastnav ul li a.activelink {
   border-color: #121212;
 }
 article .light-text {
-  color: #fdfdfd;
+  color: #FDFDFD;
 }

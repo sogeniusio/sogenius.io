@@ -10,6 +10,13 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+/**
+ * Bug test
+ */
+Route::get('/bugs', function() {
+      Bugsnag::notifyError('ErrorType', 'Test Error');
+});
+
 # ---------------------------------------------------------------------
 # Frontend pages
 # ---------------------------------------------------------------------
@@ -24,6 +31,8 @@ Route::get('instagram', 'PagesController@instagramFeed');
 
 Route::get('news', 'NewsController@getNews');
 Route::get('news/{slug}', ['as' => 'news.post', 'uses' => 'NewsController@getPost'])->where('slug', '[\w\d\-\_]+');
+
+Route::get('notification', 'UserController@notification');
 
 Route::get('privacy', function() {
 	return View::make('pages.privacy');
@@ -50,6 +59,9 @@ Auth::routes();
 
 Route::get('admin', 'AdminController@getAdmin');
 
+Route::get('admin/profile', 'AdminController@getProfile');
+Route::post('admin/profile', 'AdminController@updateAvatar');
+
 Route::resource('admin/settings', 'AdminSettingsController');
 Route::resource('admin/testimonies', 'TestimonyController', ['except' => ['create']]);
 
@@ -61,7 +73,6 @@ Route::resource('admin/tags', 'TagController', ['except' => ['create']]);
 Route::resource('admin/projects', 'ProjectController');
 Route::resource('admin/types', 'TypeController', ['except' => ['create']]);
 Route::resource('admin/identities', 'IdentityController', ['except' => ['create']]);
-
 
 Route::post('admin/quotes/{quote_id}', ['uses' => 'QuoteController@store', 'as' => 'quote.store']);
 Route::get('admin/quotes/{id}/edit', ['uses' => 'QuoteController@edit', 'as' => 'quote.edit']);

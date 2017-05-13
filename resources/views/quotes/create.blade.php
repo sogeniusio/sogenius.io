@@ -1,4 +1,0 @@
-
-@php
-  dd($questions);
-@endphp

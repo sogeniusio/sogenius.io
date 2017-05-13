@@ -34,7 +34,7 @@
   </div>
         <!-- End Page Header -->
 
-            @yield('content')
+                    @yield('content')
         
         <!-- Start Footer -->
         <div class="row footer">

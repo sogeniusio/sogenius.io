@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+// use GrahamCampbell\Exceptions\NewExceptionHandler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -44,9 +45,16 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-      if ($exception instanceof ServerError) {
+        if ($exception instanceof ServerError) {
               return response()->view('errors.500', [], 500);
-      }
+        }
+        // Check for Ajax errors
+        if($request->ajax())
+        {
+            return response()->json([
+                'responseText' => $e->getMessage()
+            ], 500);
+        }
 
       // normal 404 view page feedback
       // return response()->view('errors.404', [], 404);

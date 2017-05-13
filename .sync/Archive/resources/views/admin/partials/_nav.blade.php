@@ -76,8 +76,7 @@
                                 <span class="pull-right text-muted">40% Complete</span>
                             </p>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                     <span class="sr-only">40% Complete (success)</span>
                                 </div>
                             </div>
@@ -93,8 +92,7 @@
                                 <span class="pull-right text-muted">20% Complete</span>
                             </p>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                                     <span class="sr-only">20% Complete</span>
                                 </div>
                             </div>
@@ -110,8 +108,7 @@
                                 <span class="pull-right text-muted">60% Complete</span>
                             </p>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                     <span class="sr-only">60% Complete (warning)</span>
                                 </div>
                             </div>
@@ -127,8 +124,7 @@
                                 <span class="pull-right text-muted">80% Complete</span>
                             </p>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                                     <span class="sr-only">80% Complete (danger)</span>
                                 </div>
                             </div>
@@ -242,21 +238,6 @@
                 <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
-                {{--POSTS--}}
-                <li>
-                    <a href="#"><i class="fa fa-file-text-o fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="flot.html">View Posts</a>
-                        </li>
-                        <li>
-                            <a href="flot.html">Create New Post</a>
-                        </li>
-
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                {{-- END POSTS--}}
                 <li>
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -300,8 +281,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
-                                class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="#">Second Level Item</a>

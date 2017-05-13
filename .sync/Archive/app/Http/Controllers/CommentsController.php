@@ -13,6 +13,11 @@ use Session;
 
 class CommentsController extends Controller
 {
+
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
     /**
 
      * Display a listing of the resource.
@@ -65,7 +70,7 @@ class CommentsController extends Controller
 
         Session::flash('success', 'Comment was successfully added!');
 
-        return redirect()->route('admin.blog.post', [$post->slug]);
+        return redirect()->route('blog.post', [$post->slug]);
 
 
 
@@ -112,13 +117,13 @@ class CommentsController extends Controller
 
         Session::flash('success', 'The comment was successfully edited');
 
-        return redirect()->route('admin.posts.show', $comment->post_id);
+        return redirect()->route('posts.show', $comment->post_id);
     }
 
     public function delete($id)
     {
         $comment = Comment::find($id);
-        return view('comments.delete')->withComment($comment);
+        return view('admin.comments.delete')->withComment($comment);
     }
 
     /**
@@ -134,6 +139,6 @@ class CommentsController extends Controller
         $comment->delete();
 
         Session::flash('success', 'The comment was successfully deleted');
-        return redirect()->route('admin.posts.show', $post->id);
+        return redirect()->route('posts.show', $post->id);
     }
 }

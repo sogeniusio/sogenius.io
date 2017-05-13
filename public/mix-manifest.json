@@ -1,0 +1,9 @@
+{
+  "/mix.js": "/mix.js",
+  "/backend/css/admin.css": "/backend/css/admin.css",
+  "/css/font.css": "/css/font.css",
+  "/css/color.css": "/css/color.css",
+  "/css/bundle.css": "/css/bundle.css",
+  "/css/icons.bundle.css": "/css/icons.bundle.css",
+  "/css/plugins.bundle.css": "/css/plugins.bundle.css"
+}

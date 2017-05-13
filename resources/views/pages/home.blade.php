@@ -79,7 +79,7 @@
         <section class="container about pad-top-half pad-bottom-half">
 
             <div class="row">
-                <article class="col-md-6 text-left inner-pad">
+                <article class="col-md-6 text-left">
                     <h6 class="super-text font2bold black animated fadeInDown">Hi! I'm Hos <span class="pronounciation"><small>pronounced / HAHZ /</small></span>
                     </h6>
                     <p class="font2light black avail-para">I am <span class="availability">available</span><span

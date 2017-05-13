@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'development'),
+    'env' => env('APP_ENV', 'production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -166,8 +166,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
-        Torann\GeoIP\GeoIPServiceProvider::class,
+
 
 
         /*
@@ -176,7 +175,6 @@ return [
         
         Collective\Html\HtmlServiceProvider::class,
         Mews\Purifier\PurifierServiceProvider::class,
-        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
@@ -185,7 +183,13 @@ return [
         Barryvdh\Snappy\ServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        anlutro\LaravelSettings\ServiceProvider::class,
+        Clockwork\Support\Laravel\ClockworkServiceProvider::class,
+        Laracademy\Commands\MakeServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+
 
 
         /*
@@ -196,6 +200,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ErrorServiceProvider::class,
 
     ],
 
@@ -253,9 +258,10 @@ return [
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
-        'Setting' => 'anlutro\LaravelSettings\Facade',
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
+        'GeoIP' => Torann\GeoIP\Facades\GeoIP::class,
+        'Clockwork' => Clockwork\Support\Laravel\Facade::class,
+        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
 
     ],
 

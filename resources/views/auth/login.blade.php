@@ -4,9 +4,9 @@
     <form role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
         <div class="top">
-            <img src="img/kode-icon.png" alt="icon" class="icon">
-            <h1>Kode</h1>
-            <h4>Bootstrap Admin Template</h4>
+            <img src="{{ asset('/atom-dark%402x.svg') }}" style="max-width: 80px;" alt="icon" class="icon">
+            <h1>{!! config('site.name') !!}</h1>
+            <h4>{!! config('site.motto') !!}</h4>
         </div>
         <div class="form-area ">
             <div class="group {{ $errors->has('email') ? ' has-error' : '' }}">
@@ -23,7 +23,7 @@
                         <strong>{{ $errors->first('password') }}</strong>
                     </span> @endif
             </div>
-            <div class="checkbox checkbox-primary">
+            <div class="group checkbox checkbox-primary">
                 <input id="checkbox" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label for="checkbox"> Remember Me</label>
             </div>
@@ -31,8 +31,8 @@
         </div>
     </form>
     <div class="footer-links row">
-        <div class="col-xs-6"><a href="{{ url('/register') }}"><i class="fa fa-external-link"></i> Register Now</a></div>
-        <div class="col-xs-6 text-right"><a href="{{ url('/password/reset') }}"><i class="fa fa-lock"></i> Forgot password</a></div>
+        {{-- <div class="col-xs-6"><a href="{{ url('/register') }}"><i class="fa fa-external-link"></i> Register Now</a></div> --}}
+        {{-- <div class="col-xs-6 text-right"><a href="{{ url('/password/reset') }}"><i class="fa fa-lock"></i> Forgot password</a></div> --}}
     </div>
 </div>
 @stop

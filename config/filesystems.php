@@ -42,18 +42,15 @@ return [
     */
 
     'disks' => [
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
-
         'public' => [
             'driver' => 'local',
             'root' => public_path('uploads'),
             'visibility' => 'public',
         ],
-
         's3' => [
             'driver' => 's3',
             'key' => 'your-key',
@@ -61,7 +58,10 @@ return [
             'region' => 'your-region',
             'bucket' => 'your-bucket',
         ],
-
+        'laradrop' => [
+            'driver' => 'local',
+            'root' => public_path('storage/uploads'),
+        ]
     ],
 
 ];

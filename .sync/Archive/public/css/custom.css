@@ -1,41 +1,41 @@
-/* Style Tweaks */
+ /* Style Tweaks */
 
-.pronounciation {
-    display: block;
-    font-size: .9em;
-    /*font-style: italic;*/
+ .pronounciation {
+  display: block;
+  font-size: .9em;
+  /*font-style: italic;*/
 }
 
 .last-name {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .works-filter a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .social-block {
-    left: 60px;
+  left: 60px;
 }
 
 .logo-block {
-    /*margin-left: 10px;*/
+  margin-left: 10px;
 }
 
 .services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .services-list li {
-    display: inline;
-    font-size: .8em;
+  display: inline;
+  font-size: .8em;
 }
 
 .availability {
-    padding-bottom: 3px;
-    border-bottom: #E0E0E0 solid 2px;
+  padding-bottom: 3px;
+  border-bottom: #E0E0E0 solid 2px;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
@@ -44,48 +44,47 @@
 }
 
 .availability:hover {
-    border-bottom: #999999 solid 2px;
+  border-bottom: #999999 solid 2px;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .avail-para {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 .about {
-    min-height: 170px;
+  min-height: 170px;
 }
 
 .signature img {
-    width: 15%;
-    max-width: 185px;
+  width: 25%;
+  max-width: 185px;
 }
-
 .testimonial-block p {
-    color: #e26969;
-    font-size: .9em !important;
-    font-weight: 500;
+  color: #e26969;
+  font-size: .9em !important;
+  font-weight: 500;
 }
 
 .testimonial-block h5 {
-    color: #e49797;
+  color: #e49797;
 }
-
 ul.main-menu > li {
-    background: #ecf0f1;
-    padding: 3px 12px;
+  background: #ecf0f1;
+  padding: 3px 12px;
 
 }
 
 ul.main-menu > li.activelink {
-    background: #bdc3c4;
-    padding: 3px 12px;
+  background: #bdc3c4;
+  padding: 3px 12px;
 }
+
 
 /*.services-list a {
   padding: 10px;
@@ -95,9 +94,3 @@ ul.main-menu > li.activelink {
 /*.text-emphasis {
   background
 }*/
-
-/*.logo-block {*/
-    /*transform: rotate(90deg);*/
-/*}*/
-
-

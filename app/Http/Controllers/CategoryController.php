@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Category;
 use App\Post;
 use Session;
+use View;
 
 class CategoryController extends Controller
 {
@@ -21,9 +22,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $data['categories'] = Category::all();
 
-        return view('admin.categories.index')->withCategories($categories);
+        return View::make('admin.categories.index', $data);
 
     }
 

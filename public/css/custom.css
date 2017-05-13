@@ -17,7 +17,11 @@
 .social-block {
     left: 60px;
 }
+/*--------------------------------------------------
 
+CUSTOM STYLES
+
+*/
 .logo-block {
     /*margin-left: 10px;*/
 }
@@ -26,6 +30,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+nav > li.main-link > a:hover {
+  color: #c0392b !important;
 }
 
 .services-list li {

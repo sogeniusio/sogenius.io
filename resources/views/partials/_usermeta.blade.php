@@ -1,3 +1,1 @@
-<!-- USER :: DATA -->
-<!-- Visit #{{ $visit }} -->
-<!-- {{-- {{ $location }} --}} -->
+<!-- USER :: DATA |VISIT| #{{ $visit }} |LOCALE| - {{-- {{ $location }} --}}   -->

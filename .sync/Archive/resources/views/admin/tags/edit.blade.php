@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('admin2')
 
 @section('title', '| Edit Tag')
 
@@ -50,7 +50,7 @@
                                 {{ Form::text('name', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                             </div>
                             <div class="form-group">
-                                {{ Form::submit('Save Changes', array('class' => 'btn2 btn-success btn-sm btn-block')) }}
+                                {{ Form::submit('Save Changes', array('class' => 'btn btn-success btn-sm btn-block')) }}
                             </div>
 
 

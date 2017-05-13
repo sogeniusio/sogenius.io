@@ -5,3 +5,42 @@
     Author URL: http://www.themeforest.net/user/egemem
 ================================================================================*/
 
+/* ================================================
+Plugin Css
+================================================ */
+/* Awesome Bootstrap Checkbox */
+@import url('/backend/css/plugin/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css');
+
+/* Bootstrap Select */
+@import url('/backend/css/plugin/bootstrap-select/bootstrap-select.css');
+
+/* Bootstrap Select */
+@import url('/backend/css/plugin/bootstrap-toggle/bootstrap-toggle.min.css');
+
+/* Bootstrap wysihtml5 */
+@import url('/backend/css/plugin/bootstrap-wysihtml5/bootstrap-wysihtml5.css');
+
+/* Summernote */
+@import url('/backend/css/plugin/summernote/summernote.css');
+@import url('/backend/css/plugin/summernote/summernote-bs3.css');
+
+/* Sweet Alert */
+@import url('/backend/css/plugin/sweet-alert/sweet-alert.css');
+
+/* Data Tables */
+@import url('/backend/css/plugin/datatables/datatables.css');
+
+/* Chartist */
+@import url('/backend/css/plugin/chartist/chartist.min.css');
+
+/* Rickshaw */
+@import url('/backend/css/plugin/rickshaw/rickshaw.css');
+@import url('/backend/css/plugin/rickshaw/detail.css');
+@import url('/backend/css/plugin/rickshaw/graph.css');
+@import url('/backend/css/plugin/rickshaw/legend.css');
+
+/* Date Range Picker */
+@import url('/backend/css/plugin/date-range-picker/daterangepicker-bs3.css');
+
+/* Full Calendar */
+@import url('/backend/css/plugin/fullcalendar/fullcalendar.css');

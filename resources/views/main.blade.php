@@ -7,6 +7,7 @@
     <div id="preloader">
         <div id="status"></div>
     </div>
+    @include('partials._modal')
     <!-- end : preloader -->
     <div id="scroll-animate">
         <div id="scroll-animate-main">
@@ -28,10 +29,10 @@
                 <section class="content">
                     <!-- MASTER CONTENT
           –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-                    <div class="mastcontent">
-                        @yield('content')
-                    </div>
-                    <!-- end : mastwrap -->
+{{--                     <div class="mastcontent">
+ --}}                        @yield('content')
+{{--                     </div>
+ --}}                    <!-- end : mastwrap -->
                     <!-- INSTGRAM FEED
           –––––––––––––––––––––––––––––––––––––––––––––––––– -->
                     @include('partials._instafeed')
@@ -44,15 +45,20 @@
             </div>
         </div>
     </div>
+    @include('partials._show-panel')
+    @include('partials._modal')
     <!-- BACK TO TOP
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <a href="javascript:" id="return-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
     <!-- end : back to top -->
     <!-- End Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- JS
+
+
+<!-- JS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    @include('partials._scripts')
+@include('partials._scripts')
+
 </body>
 
 </html>

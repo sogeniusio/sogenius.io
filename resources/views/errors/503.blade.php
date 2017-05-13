@@ -50,7 +50,7 @@
 <body>
 <div class="container">
     <div class="content">
-        <img class="logo" src="images/atom-colored@2x.svg" alt="So Genius I/O Logo">
+        <img class="logo" src="/images/atom-colored@2x.svg" alt="So Genius I/O Logo">
         <div class="title">Be right back...</div>
     </div>
 </div>

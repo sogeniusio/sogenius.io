@@ -13,23 +13,17 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-        \DB::table('users')->delete();
+        DB::table('users')->delete();
 
-        \DB::table('users')->insert(array (
-            0 =>
-            array (
-                'id' => 1,
+        DB::table('users')->insert([
                 'firstname' => 'Hosnel',
                 'lastname' => 'Guerrier',
                 'email' => 'hos@sogenius.io',
                 'password' => bcrypt('THE216h_#1'),
                 'remember_token' => 'L0fY96Ek3r30dUE9e482JwmjxV4iKYxZ4YGBcibz7Qu0eSA31dPyR0ilR5Cc',
-                'created_at' => '2016-01-28 11:20:57',
-                'updated_at' => '2016-10-25 14:32:23',
-            ),
-
-        ));
-
+                'created_at' => Carbon\Carbon::now('America/New_York'),
+                'updated_at' => Carbon\Carbon::now('America/New_York'),
+        ]);
 
     }
 }

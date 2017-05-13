@@ -1,6 +1,6 @@
-<!-- START HEAD -->
 <!DOCTYPE html>
 <html lang="en">
+<!-- START HEAD -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
     {{ Html::style('/backend/fonts/admin-webfonts.css') }}
     {{ Html::style('/bower_components/font-awesome/css/font-awesome.min.css') }}
     {{ Html::style('/bower_components/bootstrap-css/css/bootstrap.min.css') }}
-    {{ Html::style('/backend/css/style.css') }}
+    <link rel="stylesheet" href="{{ mix('/backend/css/admin.css') }}">
     {{ Html::style('/backend/css/responsive.css') }}
     {{ Html::style('/backend/css/shortcuts.css') }}
     {{ Html::style('/backend/css/plugin/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css') }}

@@ -1,10 +1,11 @@
 <?php
 
-    namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Mail\ContactForm;
 use App\Http\Requests;
+use Illuminate\HttpResponse;
 use App\Identity;
 use App\Project;
 use App\Type;
@@ -14,6 +15,7 @@ use Mail;
 use Config;
 use View;
 use PDF;
+use Carbon;
 use GeoIP;
 use Validator;
 use Response;
@@ -28,6 +30,8 @@ class PagesController extends Controller
     public function getHome()
     {
         $data['visit'] = Redis::incr('visitors.home');
+        // $data['location'] = GeoIP::getLocation();
+        // $string = substr(implode(", ", $data['location']), 0);
 
         $data['projects'] = Cache::remember('projects.recent', 60 * 60 * 24 * 5, function () {
           return Project::orderBy('created_at', 'desc')->limit(6)->get();
@@ -38,7 +42,7 @@ class PagesController extends Controller
         $data['identities2'] = array();
           foreach ($identities as $identity) {
               $identities2[$identity->id] = $identity->name;
-          }
+        }
 
         return View::make('pages.home', $data);
 
@@ -68,6 +72,7 @@ class PagesController extends Controller
 
     public function postContact(Request $request)
     {
+
       $validator = Validator::make($request->all(), [
         'fullname' => 'required|min:3|max:60',
         'email' => 'required|email',
@@ -85,23 +90,29 @@ class PagesController extends Controller
       );
 
       if ($validator -> passes()) {
-              
-              Mail::to($data['email'])->queue(new ContactForm($data));
-              Redis::incr('send.contact');
+          Mail::to($data['email'])->queue(new ContactForm($data));
 
-              //Redirect to contact page
-              return redirect()->back()->with('success', true)->with('message','Your message was successfully sent. Ill be in touch soon');
+          $data['msg'] = array(
+              'status' => 'success',
+              'msg' => 'Message sent successfully',
+          );
+          // return response()->json($msg); 
+          $data['visit'] = Redis::incr('sent.contact');
 
-          } else {
-              // data is invalid
-              return redirect('/contact')->withErrors($validator);
-              // return redirect()->back()->withErrors($validator)->withInput();
-    }
+          // $response = [
+          //     'status' => 'success',
+          //     'message' => 'Thanks! We shall get back to you soon.',
+          // ];
+          return response()->json(['responseText' => 'Success'], 200);
+
+      } else {
+          return redirect('/contact')->withErrors($validator);
+      }
   }
 
       public function getQuote()
       {
-        Redis::incr('visitors.quote');
+        $questions['visit'] = Redis::incr('visitors.quote');
         $questions['services'] = array(
           'Accept donations',
           'Update website on your own',
@@ -138,8 +149,6 @@ class PagesController extends Controller
           "I Don't Know",
           'Other',
         );
-
-        // dd($questions);
 
         return View::make('pages.quote', $questions);
 
@@ -193,11 +202,13 @@ class PagesController extends Controller
           'created_at' => newYorkTime(),
         );
 
-        $filename = $data['quoteid'] . '_' . time() . '.pdf';
+        $filename = $data['quoteid'] . '_' . Carbon\Carbon::now() . '.pdf';
 
-        $data['quote_location'] = storage_path('quotes/' . $filename);
-        $data['pdf'] = PDF::loadView('quotes.pdf', $data)->setPaper('letter')->setOrientation('portrait')->setOption('margin-bottom', 0)->save($data['quote_location']);
-        Redis::incr('send.quote');
+        $quote_location = public_path('/storage/quotes/' . $filename);
+        $pdf = PDF::loadView('quotes.pdf', $data)->setPaper('letter')->setOrientation('portrait')->setOption('margin-bottom', 0)->save($quote_location);
+        Redis::incr('created.quote');
+
+        return $pdf->download($quote_location);
 
       }
 

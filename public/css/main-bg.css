@@ -9,16 +9,16 @@ replace preview images directly;
 
 /*sample*/
 footer.mastfoot{
-	background-image: url('../images/stripe.png');
+	background-image: url('/images/stripe.png');
 }
 .counter-region-bg{
-	background-image: url('../images/bg/05.jpg');
+	background-image: url('/images/bg/05.jpg');
 }
 .home-counter-region-bg{
-	background-image: url('../images/bg/06.jpg');
+	background-image: url('/images/bg/06.jpg');
 }
 .agency-bg{
-	background-image: url('../images/bg/06.jpg');
+	background-image: url('/images/bg/06.jpg');
 }
 
 
@@ -26,11 +26,11 @@ footer.mastfoot{
 
 
 /*.parallax-showcase-01{
-	background-image: url('../images/bg/02.jpg');
+	background-image: url('/images/bg/02.jpg');
 }
 .parallax-showcase-02{
-	background-image: url('../images/bg/03.jpg');
+	background-image: url('/images/bg/03.jpg');
 }
 .parallax-showcase-03{
-	background-image: url('../images/bg/01.jpg');
+	background-image: url('/images/bg/01.jpg');
 }*/

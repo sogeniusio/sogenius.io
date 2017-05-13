@@ -38,7 +38,7 @@ class CategoryController extends Controller
     //  * Show the form for creating a new resource.
     //  *
     //  * @return \Illuminate\Http\Response
-     
+
     // public function create()
     // {
     //     //
@@ -76,7 +76,7 @@ class CategoryController extends Controller
 
         // Redirect to index page
 
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('categories.index');
     }
 
     /**

@@ -28,6 +28,6 @@ class CreateIdentityProjectTable extends Migration
      */
     public function down()
     {
-      Schema::drop('identity_project');
+      Schema::dropIfExists('identity_project');
     }
 }

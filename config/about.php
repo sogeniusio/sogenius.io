@@ -7,7 +7,7 @@ return [
     'nick' => 'Hos',
     'nick_pronounce' => '| Hahz |',
     'age' => Carbon::createFromDate(1990, 3, 2)->diff(Carbon::now())->format('%y years old'),
-    'bio' => 'I am a 26 years old freelance web developer /
+    'bio' => 'I am a 27 years old freelance web developer /
     designer based in New York City. I build beautiful and functional websites for small
     businesses and brands. I am completely self-taught, specializing in brand design,
     development &amp strategy, website &amp mobile applications, user experience, email design

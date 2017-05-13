@@ -1,8 +1,7 @@
 <section class="logo-header">
 
     <div class="atom-block">
-        <a href="index.html"><img alt="" title="" style="max-width: 50px;" class="img-responsive"
-                                  src="/images/atom-dark.svg"></a>
+        <a href="index.html"><img alt="" title="" style="max-width: 50px;" class="img-responsive" src="images/atom-dark.svg"></a>
     </div>
 
 

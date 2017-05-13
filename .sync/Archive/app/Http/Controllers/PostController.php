@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Post;
-
 class PostController extends Controller
 {
     /**
@@ -15,7 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('admin.posts.index');
+        //
     }
 
     /**
@@ -83,7 +81,7 @@ class PostController extends Controller
 
       // redirect to post
 
-      return redirect()->route( 'admin.posts.show', $post->id );
+      return redirect()->route( 'posts.show', $post->id );
     }
 
     /**
@@ -95,7 +93,7 @@ class PostController extends Controller
     public function show($id)
     {
       $post = Post::find($id);
-      return view('admin.posts.show')->withPost($post);
+      return view('posts.show')->withPost($post);
     }
 
     /**
@@ -124,7 +122,7 @@ class PostController extends Controller
       }
 
       // return the view and pass in variable
-      return view('admin.posts.edit')->withPost($post)->withCategories($cats)->withTags($tags2);
+      return view('posts.edit')->withPost($post)->withCategories($cats)->withTags($tags2);
 
     }
 
@@ -181,7 +179,7 @@ class PostController extends Controller
 
       // redirect with flash data to posts.show
 
-      return redirect()->route('admin.posts.show', $post->id);
+      return redirect()->route('posts.show', $post->id);
     }
 
     /**
@@ -210,6 +208,6 @@ class PostController extends Controller
 
   // return to blog index view
 
-  return redirect()->route('admin.posts.index');
+  return redirect()->route('posts.index');
     }
 }

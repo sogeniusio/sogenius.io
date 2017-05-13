@@ -13,10 +13,11 @@
     {{ Html::style('/backend/fonts/admin-webfonts.css') }}
     {{ Html::style('/bower_components/font-awesome/css/font-awesome.min.css') }}
     {{ Html::style('/bower_components/bootstrap-css/css/bootstrap.min.css') }}
-    {{ Html::style('/backend/css/style.css') }}
+    <link rel="stylesheet" type="text/css" href="{{ mix('/backend/css/admin.css') }}">
     {{ Html::style('/backend/css/responsive.css') }}
     {{ Html::style('/backend/css/shortcuts.css') }}
     <!-- ======== CUSTOM STYLES ======== -->
+    {{ Html::style('/backend/css/root.css') }}
     @yield('stylesheets')
     <style type="text/css">
     body {
